@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piece of Heaven - Piscok Lumer Frozen</title>
+  <link rel="stylesheet" href="style1.css" />
+  <!-- Font & Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      ✨ Piece of Heaven <span>🍫</span>
+    </div>
+    <div class="cart-icon" onclick="toggleCart()">
+      <i class="fas fa-basket-shopping"></i>
+      <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge-promo">✨ Gigitan Surga Yang Lumer! 🍌</span>
+      <h1>Piece of Heaven</h1>
+      <p>Piscok lumer frozen premium! Luarnya crispy, dalamnya cokelat melimpah beneran bikin melayang~ (Isi 5 pcs / pack)</p>
+      <a href="#produk" class="btn-primary">Cobain Sekarang 💖</a>
+    </div>
+    <div class="hero-image">
+      <div class="floating-card">
+        <span class="price-tag">Rp12.000 / pack</span>
+        <img src="pisang.jpg" alt="Piece of Heaven Piscok" />
+        <div class="cute-badge-1">⭐ Best Pick</div>
+        <div class="cute-badge-2">🍫 Crispy & Lumer</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section Produk -->
+  <section id="produk" class="products-section">
+    <h2>Varian Rasa Terfavorit 😋</h2>
+    <div class="product-grid">
+
+      <!-- Varian 1: Original -->
+      <div class="product-card">
+        <div class="img-container">
+          <img src="piscok.jpg" alt="Piscok Original" />
+          <span class="badge">🔥 Most Loved</span>
+        </div>
+        <div class="card-body">
+          <h3>Piscok Original Lumer</h3>
+          <p class="desc">Isi 5 pcs / pack. Pisang manis dibalut lelehan cokelat tebal yang lumer banget di mulut!</p>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(4.9)</span>
+          </div>
+          <div class="card-footer">
+            <span class="price">Rp12.000</span>
+            <button class="btn-add" onclick="addToCart('Piscok Original Lumer', 12000, 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=600&q=80')">
+              + Keranjang 🛒
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Varian 2: Cookies & Cream -->
+      <div class="product-card">
+        <div class="img-container">
+          <img src="piscok1.jpeg" alt="Piscok Cookies and Cream" />
+          <span class="badge-blue">✨ New Favorite</span>
+        </div>
+        <div class="card-body">
+          <h3>Piscok Cookies & Cream</h3>
+          <p class="desc">Isi 5 pcs / pack. Perpaduan manis manis gurih cream putih dengan taburan biskuit renyah!</p>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(5.0)</span>
+          </div>
+          <div class="card-footer">
+            <span class="price">Rp12.000</span>
+            <button class="btn-add" onclick="addToCart('Piscok Cookies & Cream', 12000, 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80')">
+              + Keranjang 🛒
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Drawer Keranjang Belanja -->
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>🧺 Keranjang Surga Kamu</h3>
+      <span class="close-cart" onclick="toggleCart()">&times;</span>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <!-- Item dirender via JavaScript -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total Belanja:</span>
+        <strong id="cart-total-price">Rp0</strong>
+      </div>
+      <button class="btn-checkout" onclick="checkout()">Checkout Sekarang ✨</button>
+    </div>
+  </div>
+
+  <div id="overlay" class="overlay" onclick="toggleCart()"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
